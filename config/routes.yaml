@@ -1,0 +1,35 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+homepage:
+  path: /
+  controller: App\Controller\HomeController::index
+
+handle_contact_form:
+    path: /handle-contact-form
+    controller: App\Controller\ContactController::handleContactForm
+
+contact_success:
+    path: /contact_success
+    controller: App\Controller\ContactController::contactSuccess
+
+contact_form:
+    path: /contact
+    controller: App\Controller\ContactController::contactForm
+
+devis:
+    path: /devis
+    controller: App\Controller\DevisController::devis
+
+mentions_legales:
+    path: /mentions-legales
+    controller: App\Controller\MentionsLegalesController::index
+
+politique_de_confidentialite:
+    path: /politique-de-confidentialite
+    controller: App\Controller\PolitiqueConfidentialiteController::index
+
+

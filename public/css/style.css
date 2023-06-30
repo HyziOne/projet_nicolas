@@ -1,0 +1,439 @@
+/* assets/css/style.css */
+
+:root {
+    --primary-color: #333;
+    --background-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --link-color: #333;
+    --logo-height: 50px;
+    --footer-background-color: #f8f9fa;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('../fonts/WEB/fonts/Satoshi-Medium.woff') format('woff');
+}
+
+body {
+    font-family: 'Satoshi';
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    color: #F54D99;
+}
+.footer-column h3,
+.footer-column p,
+.footer-columns > * {
+    color: #FFF;
+}
+
+li, p {
+    color: #00567D;
+}
+section {
+    padding-bottom: 2em;
+}
+ul {
+    padding-left: 30px;
+}
+/* Menu */
+#header {
+    position: fixed;
+}
+.left.header {
+    display: flex;
+    align-items: flex-end;
+}
+.menu-top > * {
+    /* background-color: #00567D; */
+    z-index: 0;
+    transition: all 0.6s ease-out 0s;
+    z-index: 999;
+    position: relative;
+
+    
+}
+.menu-top.sticky > * {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* Menu burger */
+.mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: none;
+}
+
+.navbar ul.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    min-width: 100%;
+}
+
+#header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#header nav ul li {
+    margin-right: 15px;
+}
+
+#header nav ul li:last-child {
+    margin-right: 0;
+}
+.menu-top.sticky header#header .container.d-flex.align-items-center nav#navbar ul li a.nav-link.menu-top{ 
+    color: #000;
+    margin-top: 20px;
+    /* background-color: #fff; */
+}
+a.nav-link.menu-top.right {
+    border: solid 1px #D9D4D1;
+    border-radius: 15px;
+    padding: 5px 15px !important;
+}
+nav#navbar {
+    padding: 0;
+    display: block;
+}
+nav#navbar.left {
+    margin-left: 1em;
+}
+nav#navbar\ right {
+    padding-right: 15px;
+}
+#header nav ul li a {
+    display: block;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding: 0 8px;
+    text-decoration: none;
+}
+#header .mobile-nav-toggle {
+    font-size: 24px;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+/* Position fixe du header */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navbar.right {
+    padding-right: 1em;
+}
+.menu-top.sticky header#header .container.d-flex.align-items-center a.logo.me-auto img {
+    filter: brightness(1) invert(0);
+}
+.logo img { 
+    height: var(--logo-height);
+    filter: brightness(0) invert(1);
+}
+
+/* Style du menu mobile */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    #header nav ul {
+        display: none;
+    }
+
+    #header .mobile-nav-toggle {
+        display: block;
+    }
+}
+/* Footer */
+.wave-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+#footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00567D;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    /* margin-top: 100px; */
+}
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.footer-column {
+    width: calc(33% - 20px);
+    margin-bottom: 20px;
+}
+.footer-column h3 {
+    padding-bottom: 15px;
+}
+.bottom-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.bottom-footer >a:hover {
+    color: #F54D99;
+    text-decoration: none;
+}
+.bottom-footer > * {
+    color: #FFF;
+}
+.footer-column form input,
+.footer-column form textarea {
+    background-color: #00567D;
+    border: solid 1px #00567D;
+    border-bottom: solid 2px #FFF;
+}
+
+.footer-column form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.footer-column label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-column input[type="text"],
+.footer-column input[type="email"],
+.footer-column textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    color: #FFF;
+}
+
+.footer-column textarea {
+    height: 50px;
+}
+
+.footer-column button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #F54D99;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.footer-column .input-field {
+    display: flex;
+    margin-bottom: 10px;
+}
+.footer-column .input-field label {
+    width: 125px;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+
+/* Home page */
+/* .full-home::before {
+    content: "";
+    display: block; */
+/* .full-home {
+    background-image: url('/images/wave.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    z-index: -1;
+} */
+.content::before {
+    content: "";
+    display: block;
+    /* margin-top: 80px; */
+    background-image: url('/images/wave.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    /* margin-top: -260px; */
+    margin-top: -50px;
+    position: absolute;
+    z-index: -1;
+}
+
+canvas.particles-js-canvas-el {
+    position: absolute;
+    z-index: 0;
+}
+#particles-js {
+    z-index: -1; /* Mettre le z-index des bulles plus bas */
+}
+/* Contenu */
+#content {
+    margin-top: 80px; /* Hauteur du header */
+}
+.content {
+    color: #FFF;
+    /* background-color: #00567D; */
+    /* margin-top: -80px; */
+} 
+.subcontent {
+    padding: 1em 2em;
+    padding-top: 80px;
+}
+.profil-ncgrk {
+    display: flex;
+    padding-top: 15px;
+    justify-content: center;
+}
+.profil-ncgrk img {
+    width: 350px;
+    height: 350px;
+}
+.top-title {
+    display: flex;
+    justify-content: center;
+    padding: 7em 0;
+}
+.top-title > * {
+    font-size: 40px;
+}
+.NG-def {
+    position: absolute;
+    margin-top: 1.5em;
+}
+.full-item {
+    margin-top: 2em;
+}
+.item {
+    width: 33% !important;
+    height: 300px;
+    background-color: #00567D;
+    border: solid;
+}
+div#portfolio-buttons {
+    display: flex;
+    justify-content: center;
+}
+div#portfolio-buttons > * {
+    padding: 7px 15px;
+    margin: 0 15px;
+    border-radius: 5px;
+    color: #00567D;
+    border: solid 1px #F54D99;
+    background-color: #FFF;
+}
+button.is-checked:active, 
+div#portfolio-buttons > *:active,
+div#portfolio-buttons > *:focus,
+div#portfolio-buttons > *:focus-visible,
+div#portfolio-buttons > *:hover {
+    background-color: #F54D99;
+    color: #FFF;
+}
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.item .large-redirect {
+    position: relative;
+    background-color: rgb(255,255,255, 0.8);
+    height: 75px;
+    margin-top: -75px;
+    display: none;
+    justify-content: space-between;
+    padding: 0em 2em;
+    align-items: center;
+}
+.item:hover > .large-redirect {
+    display: flex;
+}
+.right-redirect a {
+    background-color: #F54D99;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+/* .item .large-redirect { 
+    background: #fff;
+    bottom: 0;
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    margin-bottom: -15px;
+    opacity: 0;
+    -webkit-transition: height .5s ease 0s;
+    transition: height .5s ease 0s;
+} */
+
+
+/* Tarte au citron */
+div#tarteaucitronIcon {
+    left: 0;
+}
+#tarteaucitronIcon #tarteaucitronManager img {
+    filter: brightness(0) invert(1);
+}
+.tarteaucitronIconBottomRight #tarteaucitronManager {
+    background-color: #00568C;
+}
+div#tarteaucitronIcon {
+    width: min-content;
+}

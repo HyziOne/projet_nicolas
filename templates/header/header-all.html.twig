@@ -1,0 +1,51 @@
+{# templates/header.html.twig #}
+
+
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <div class="left header">
+          <a href="/" class="logo me-auto"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
+          <nav id="navbar" class="navbar left">
+              <ul>
+                  <li><a class="nav-link menu-top left" href="/">Accueil</a></li>
+              </ul>
+              <i class="mobile-nav-toggle"></i>
+          </nav>
+        </div>
+        <div class="right header">
+          <nav id="navbar" class="navbar right">
+              <ul>
+                  <li><a class="nav-link menu-top right" href="#contact">Contact</a></li>
+                  <li><a class="nav-link menu-top right" href="/devis">Devis</a></li>
+              </ul>
+              <i class="mobile-nav-toggle"></i>
+          </nav>
+      </div>
+    </div>
+</header>
+<script>
+window.onscroll = function () {
+    const header_navbar = document.querySelector(".menu-top");
+    const sticky = header_navbar.offsetTop;
+    const logo = document.querySelector(".logo.me-auto");
+
+    if (window.pageYOffset > sticky) {
+      header_navbar.classList.add("sticky");
+      logo.src = "assets/images/logo/logo-2.svg";
+    } else {
+      header_navbar.classList.remove("sticky");
+      logo.src = "assets/images/logo/logo.svg";
+    }
+
+    // show or hide the back-top-top button
+    const backToTop = document.querySelector(".back-to-top");
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      backToTop.style.display = "flex";
+    } else {
+      backToTop.style.display = "none";
+    }
+};
+</script>

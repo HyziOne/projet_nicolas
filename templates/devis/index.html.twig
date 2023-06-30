@@ -1,0 +1,36 @@
+{# templates/devis/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="mb-4">Demande de devis</h1>
+
+    {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+        <div class="mb-3">
+            {{ form_label(form.vousEtes, 'Vous êtes', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.vousEtes, {'attr': {'class': 'form-select'}}) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.natureDuProjet, 'Nature du projet', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.natureDuProjet, {'attr': {'class': 'form-select'}}) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.typeDeSite, 'Type de site', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.typeDeSite, {'attr': {'class': 'form-select'}}) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.graphismeARealiser, 'Graphisme à réaliser', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.graphismeARealiser, {'attr': {'class': 'form-select'}}) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.urlDuSite, 'Si vous avez déjà un site, indiquez son URL', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.urlDuSite, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+    {{ form_end(form) }}
+{% endblock %}
